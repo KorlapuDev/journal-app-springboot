@@ -20,4 +20,5 @@ public class JournalEntries {
     private String title;
     private String content;
     private LocalDateTime date = LocalDateTime.now();
+
 }
