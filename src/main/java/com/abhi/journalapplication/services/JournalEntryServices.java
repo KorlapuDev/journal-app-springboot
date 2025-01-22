@@ -8,6 +8,8 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class JournalEntryServices {
 
@@ -27,5 +29,10 @@ public class JournalEntryServices {
         user.getJournalEntries().add(savedEntry);
         usersServices.updateJournalEntries(user);
         return true;
+    }
+
+    public List<JournalEntries> getAllJournalEntries(){
+        return journalEntryRepository.findAll();
+
     }
 }
